@@ -1,5 +1,11 @@
+import { Memory } from "./components/memory";
+
 function App() {
-  return <></>;
+  return (
+    <>
+      <Memory />
+    </>
+  );
 }
 
 export default App;

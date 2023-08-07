@@ -1,0 +1,25 @@
+.memory {
+    max-width: 400px;
+    margin: 0 auto;
+    padding: 2rem;
+    text-align: center;
+    background-color: red;
+    display: flex;
+    flex-wrap:wrap ;
+    &Item{
+        width: 100px;
+        height: 100px;
+   
+        // background-color: black;
+        border:solid 1px  blue;
+
+    }
+    &Item2{
+        width: 100px;
+        height: 100px;
+   
+        // background-color: black;
+        border:solid 1px  green;
+
+    }
+}
