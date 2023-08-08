@@ -12,13 +12,13 @@ export const MemoryItem: React.FC<MemoryItemProps> = ({
   index,
 }) => {
   return (
-    // <div className={styles.memory}>
-    <div
-      className={styles[item]}
-      onClick={() => memoryItemClick("memoryItem2", index)}
-    >
-      {item}
+    <div className={styles.memoryItem}>
+      <div
+        className={styles.memoryItemValueShow}
+        onClick={() => memoryItemClick("memoryItemValueHiden", index)}
+      >
+        <i className={item}></i>
+      </div>
     </div>
-    // </div>
   );
 };

@@ -1,25 +1,36 @@
 .memory {
-    max-width: 400px;
-    margin: 0 auto;
-    padding: 2rem;
-    text-align: center;
-    background-color: red;
-    display: flex;
-    flex-wrap:wrap ;
-    &Item{
-        width: 100px;
-        height: 100px;
-   
-        // background-color: black;
-        border:solid 1px  blue;
+  max-width: 400px;
+  margin: 0 auto;
+  padding: 2rem;
+  text-align: center;
 
-    }
-    &Item2{
-        width: 100px;
-        height: 100px;
-   
-        // background-color: black;
-        border:solid 1px  green;
+  display: flex;
+  flex-wrap: wrap;
 
+
+  &Item {
+    width: 100px;
+    height: 100px;
+    padding: 1px;
+
+    border: solid 3px white;
+    background-color: antiquewhite;
+    box-sizing: border-box;
+
+    &ValueShow {
+      width: 100%;
+      height: 100%;
+
+      display: flex;
     }
+    &ValueHiden {
+      width: 100%;
+      height: 100%;
+      visibility: hidden;
+    }
+  }
+}
+
+i {
+  margin: auto;
 }

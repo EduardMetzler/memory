@@ -4,14 +4,14 @@ import styles from "./index.module.scss";
 
 export const Memory: React.FC<any> = ({}) => {
   const [items, setItems] = useState([
-    { className: "memoryItem" },
-    { className: "memoryItem2" },
-    { className: "memoryItem" },
-    { className: "memoryItem2" },
-    { className: "memoryItem" },
-    { className: "memoryItem2" },
-    { className: "memoryItem" },
-    { className: "memoryItem2" },
+    { className: "fa-solid fa-mountain-sun fa-2xl" },
+    { className: "fa-solid fa-mountain-sun fa-2xl" },
+    { className: "fa-solid fa-mountain-sun fa-2xl" },
+    { className: "fa-solid fa-mountain-sun fa-2xl" },
+    { className: "fa-solid fa-mountain-sun fa-2xl" },
+    { className: "fa-solid fa-mountain-sun fa-2xl" },
+    { className: "fa-solid fa-mountain-sun fa-2xl" },
+    // { className: "memoryItemValueShow" },
   ]);
 
   const memoryItemClick = (r: any, index: any) => {
