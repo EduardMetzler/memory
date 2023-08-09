@@ -1,8 +1,8 @@
 import styles from "../memory/index.module.scss";
 
 interface MemoryItemProps {
-  item: string;
-  memoryItemClick: (e: string, index: number) => void;
+  item: { className: string; show: boolean; clear: boolean };
+  memoryItemClick: (index: number) => void;
   index: number;
 }
 
@@ -12,12 +12,12 @@ export const MemoryItem: React.FC<MemoryItemProps> = ({
   index,
 }) => {
   return (
-    <div className={styles.memoryItem}>
+    <div className={item.clear ? styles.memoryItemClear : styles.memoryItem}>
       <div
         className={styles.memoryItemValueShow}
-        onClick={() => memoryItemClick("memoryItemValueHiden", index)}
+        onClick={() => memoryItemClick(index)}
       >
-        <i className={item}></i>
+        {item.show && <i className={item.className}></i>}
       </div>
     </div>
   );
