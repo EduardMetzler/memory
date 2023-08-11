@@ -141,7 +141,7 @@ export const Memory: React.FC<any> = ({}) => {
       setSelected([items[index].className, ""]);
     } else if (selected[0] && selected[1] && selected[0] === selected[1]) {
       setItems((prev) =>
-        prev.map((item, i) =>
+        prev.map((item) =>
           selected[0] === item.className ? { ...item, clear: true } : item
         )
       );
