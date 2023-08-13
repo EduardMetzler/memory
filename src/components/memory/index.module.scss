@@ -1,7 +1,7 @@
 .memory {
   max-width: 400px;
   margin: 0 auto;
-  padding: 2rem;
+//   padding: 2rem;
   text-align: center;
 
   display: flex;
@@ -68,3 +68,32 @@ button{
     display: flex;
 
 }
+
+h2{
+    text-align: center;
+}
+
+@media (max-width: 450px) {
+    .memory {
+        max-width: 320px;
+
+      
+        &Item {
+          width: 80px;
+          height: 80px;
+
+          &Hiden{
+              width: 80px;
+              height: 80px;
+
+          }
+          &Clear{
+              width: 80px;
+              height: 80px;
+     
+          }
+      
+     
+        }
+      }
+  }
