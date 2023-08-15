@@ -16,6 +16,28 @@ export const Memory: React.FC<any> = ({}) => {
 
   console.log(icons.length);
 
+  useEffect(() => {
+    console.log(JSON.parse(localStorage.data));
+    var data =
+      JSON.parse(localStorage.data) !== undefined
+        ? JSON.parse(localStorage.data)
+        : [{}];
+
+    // const lok = localStorage.getItem("data");
+    // console.log(data);
+    if (data.length == 24) {
+      setItems(data);
+      // console.log(JSON.parse(localStorage.getItem("data")));
+      console.log("wwwwwwwwwwwwwwwwwwwwwwwwww");
+      // setItems(JSON.parse(localStorage.getItem("data")))
+    } else {
+      newGame();
+    }
+  }, []);
+  useEffect(() => {
+    localStorage.setItem("data", JSON.stringify(items));
+  }, [items]);
+
   const newGame = () => {
     if (icons) {
       const newItems = [];
@@ -58,10 +80,6 @@ export const Memory: React.FC<any> = ({}) => {
       setItems(mix);
     }
   };
-
-  useEffect(() => {
-    newGame();
-  }, []);
 
   const memoryItemClick = (index: number) => {
     if (items[index].show || items[index].clear) {
