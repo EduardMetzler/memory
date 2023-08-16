@@ -14,29 +14,24 @@ export const Memory: React.FC<any> = ({}) => {
 
   const [selected, setSelected] = useState(["", ""]);
 
-  console.log(icons.length);
+  // console.log(icons.length);
 
   useEffect(() => {
-    // console.log(JSON.parse(localStorage.data));
-    // var data =
-    //   JSON.parse(localStorage.data) !== undefined
-    //     ? JSON.parse(localStorage.data)
-    //     : [{}];
+    var data = localStorage.getItem("data");
 
-    // const lok = localStorage.getItem("data");
-    // console.log(data);
-    // if (data.length == 24) {
-    //   setItems(data);
-    //   // console.log(JSON.parse(localStorage.getItem("data")));
-    //   console.log("wwwwwwwwwwwwwwwwwwwwwwwwww");
-    //   // setItems(JSON.parse(localStorage.getItem("data")))
-    // } else {
-    newGame();
-    // }
+    if (data) {
+      setItems(JSON.parse(localStorage.data));
+      setSelected(JSON.parse(localStorage.aktuelSelect));
+    } else {
+      newGame();
+    }
   }, []);
-  // useEffect(() => {
-  //   localStorage.setItem("data", JSON.stringify(items));
-  // }, [items]);
+  useEffect(() => {
+    if (items.length > 0) {
+      localStorage.setItem("data", JSON.stringify(items));
+      localStorage.setItem("aktuelSelect", JSON.stringify(selected));
+    }
+  }, [items]);
 
   const newGame = () => {
     if (icons) {
