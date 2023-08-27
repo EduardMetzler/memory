@@ -1,7 +1,6 @@
 .memory {
   max-width: 400px;
   margin: 0 auto;
-//   padding: 2rem;
   text-align: center;
 
   display: flex;
@@ -12,7 +11,7 @@
     width: 100px;
     height: 100px;
     padding: 1px;
-
+    cursor: pointer;
     border: solid 3px white;
     background-color: antiquewhite;
     box-sizing: border-box;
@@ -21,9 +20,6 @@
         width: 100px;
         height: 100px;
         padding: 1px;
-    
-        // border: solid 3px white;
-        // background-color: antiquewhite;
         visibility: hidden;
         box-sizing: border-box;
     }
@@ -31,9 +27,6 @@
         width: 100px;
         height: 100px;
         padding: 1px;
-    
-        // border: solid 3px white;
-        // background-color: antiquewhite;
         visibility: hidden;
         box-sizing: border-box;
     }
